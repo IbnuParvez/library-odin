@@ -1,16 +1,81 @@
 <!-- setting up a library project-->
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <title>Library </title>
+  <title>Library</title>
 </head>
 <body>
-  <header></header>
+  <header>My Library</header>
   
-  <footer></footer>
+  <div class="main">
+    
+  <button id="newBookBtn">New Book</button>
+  <div id="library"></div>
+  </div>
+  
+  <dialog id="dialogBox">
+    <form method="dialog">
+      <input type="text" name="Title" id="Title" placeholder="Title..." required>
+      <input type="text" name="Author" id="Author" placeholder="Author.." required>
+      <input type="number" name="Page" id="Page" placeholder="Total number of pages">
+    
+      <label id="status">Read? <input type="checkbox" id="read"></label>
+      <button class="btn btn-light-green" type="submit">Submit</button>
+    </form>
+    
+  </dialog>
+  <footer class="footer"><p>Copyright © 2026</p></footer>
+  <script src="index.js"></script>
+</body>
+</html>
+-->
+<!-- The up commented code is my own , the down is refined code .. for example purposes-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>My Personal Library</title>
+</head>
+<body>
+  <header>
+    <h1>My Library</h1>
+  </header>
+  
+  <main class="container">
+    <button id="newBookBtn" class="btn-primary">Add New Book</button>
+    
+    <div id="libraryDisplay" class="library-grid"></div>
+  </main>
+  
+  <dialog id="bookDialog">
+    <form method="dialog">
+      <h2>Add Book Details</h2>
+      <input type="text" id="title" placeholder="Book Title" required>
+      <input type="text" id="author" placeholder="Author Name" required>
+      <input type="number" id="pages" placeholder="Total Pages" min="1">
+      
+      <div class="status-group">
+        <label for="readStatus">Have you read it?</label>
+        <input type="checkbox" id="readStatus">
+      </div>
+
+      <div class="form-actions">
+        <button type="button" id="cancelBtn">Cancel</button>
+        <button type="submit" id="submitBtn" class="btn-success">Add to Library</button>
+      </div>
+    </form>
+  </dialog>
+
+  <footer class="footer">
+    <p>Copyright © 2026</p>
+  </footer>
+
   <script src="index.js"></script>
 </body>
 </html>
