@@ -32,8 +32,12 @@ function displayBooks() {
   library.innerHTML = "";
   emptyArray.forEach((book) => {
     const newDiv = document.createElement("div");
-    newDiv.textContent = book.title + " by " + book.author + " (" + book.pages + " pages)";
-    library.appendChild(newDiv);
+    newDiv.classList.add("book-card"); // Good for CSS styling later
+    
+    // 1. Create a separate element for the text
+    const bookInfo = document.createElement("p");
+    bookInfo.textContent = `${book.title} by ${book.author} (${book.pages} pages) - ${book.read ? "Read" : "Not Read"}`;
+    newDiv.appendChild(bookInfo);    library.appendChild(newDiv);
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "Remove";
     newDiv.append(removeBtn);
